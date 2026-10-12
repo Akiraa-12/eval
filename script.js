@@ -93,7 +93,7 @@ console.log("makanan 2: " + maknan[1] + " - Harga: " + hargaMaknan[1]);
 console.log("makanan 3: " + maknan[2] + " - Harga: " + hargaMaknan[2]); 
 console.log("Roti Bakar: " + tersedia + "  Stok: " + stok);
 
-//===================transakasi=================
+//===================transakasi===================
 
 const indeksItem2Trx3 = transaksi[2].pesanan[1].indeksMenu;
 console.log("Menu item-2 trx-3     :", [indeksItem2Trx3].nama);
