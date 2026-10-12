@@ -105,3 +105,28 @@ console.log("typeof jamOperasional :", typeof kedai.jamOperasional);
 console.log("typeof menu           :", typeof menu);
 console.log("typeof catatan trx[0] :", typeof transaksi[0].catatan);
 console.log("catatanKasir          :", catatanKasir);
+
+// =============jawaban pertanyaan===========
+
+// 1. nomorWhatsApp disimpan sebagai string karena nomor telepon tidak pernah
+//    dihitung secara matematis, dan bisa diawali "0" atau "+62". Jika disimpan sebagai
+//    number, "0" di depan akan hilang dan tanda "+" tidak valid.
+
+// 2. website diisi null karena properti itu memang ada tapi belum diisi
+//    (disengaja). catatanKasir dibiarkan tanpa nilai karena kita belum tahu
+//    isinya (nilai default undefined). null = sengaja dikosongkan;
+//    undefined = belum diberi nilai sama sekali.
+
+// 3. menu[6] menghasilkan undefined, karena array hanya berisi 6 elemen
+//    dengan indeks 0–5. Mengakses indeks di luar jangkauan tidak error,
+//    hanya mengembalikan undefined.
+
+// 4. typeof menu = "object". Array di JavaScript adalah object khusus
+//    dengan perilaku tambahan (length, method push, dsb).
+
+// 5. Menu dibuat array karena berisi BANYAK item sejenis dengan urutan
+//    indeks. Kedai dibuat object karena mewakili SATU entitas dengan
+//    properti bernama (nama, kota, dsb).
+
+// ============= bagian 3 Perhitungan Transaksi dan Laporan Harian =============
+
