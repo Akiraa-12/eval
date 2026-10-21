@@ -5,8 +5,7 @@
 
 
 // BAGIAN 2: DATA KEDAI 
-const kedai = {
-  nama: "Kedai Senja",
+  nama: "Kedai Senja",{
   pemilik: "Bu Sari",
   kota: "Yogyakarta",
   tahunBerdiri: 2018,
@@ -43,7 +42,9 @@ const transaksi = [
   },
 ];
 
-// ===== Cetak data =====
+// 
+//Cetak data 
+
 console.log(kedai.nama);
 console.log(kedai["kota"]);
 console.log(kedai.jamOperasional.tutup);
