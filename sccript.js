@@ -82,3 +82,4 @@ console.log(catatanKasir); // undefined
 //   5. menu = array karena kumpulan item berurutan (bisa di-loop, diindeks);
 //      kedai = object karena mendeskripsikan satu entitas dengan properti
 //      bernama (key-value).
+
