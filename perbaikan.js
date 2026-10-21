@@ -40,7 +40,7 @@
 
 // Console.log(namaKedai, jumlahItem, subtotal, pajak, totalBayar, uangCukup, kembalian, itemGenap, transaksiSelesai);
 
-// ===============jawaban=================
+//jawaban
 
 //langkah ke empat
 //Program hitung transaksi Kedai Senja
@@ -105,3 +105,58 @@ console.log("Transaksi Selesai: " + transaksiSelesai);
 console.log("Tarif Pajak: " + TARIF_PAJAK * 100 + "%");
 
 console.log(namaKedai, jumlahItem, subtotal, pajak, totalBayar, uangCukup, kembalian, itemGenap, transaksiSelesai);
+
+
+
+// CATATAN BUG (12 kesalahan)
+
+
+// [1] Komentar  tidak ditutup 
+//     jenis  : menghentikan program (SyntaxError)
+//     sebab  : seluruh sisa file dianggap komentar, sehingga kode tidak jalan.
+
+// [2] jumlahRoti = "2" (string)
+//     jenis  : tidak error, hasil salah
+//     sebab  : 3 + "2" = "32" (konkatenasi), bukan 5.
+
+// [3] jumlahkopi (typo, huruf kecil)
+//     jenis  : menghentikan program (ReferenceError)
+//     sebab  : variabel `jumlahkopi` tidak pernah dideklarasikan.
+
+// [4] pajak = subtotal - 10000 * TARIF_PAJAK
+//     jenis  : tidak error, hasil salah
+//     sebab  : operator precedence — `10000 * 0.11 dihitung dulu,
+//              bukan (subtotal - 10000) * 0.1.
+
+// [5] totalBayar tanpa titik koma
+//     jenis  : tidak error (ASI), tapi rawan bug
+//     sebab  : JavaScript menambahkan ; otomatis, tapi praktik buruk.
+
+// [6] uangCukup = uangBayar = totalBayar
+//     jenis  : tidak error, hasil salah
+//     sebab  : = adalah assignment, bukan perbandingan (>=). uangCukup
+//              jadi berisi angka, bukan boolean.
+
+// [7] kembalian = totalBayar - uangBayar
+//     jenis  : tidak error, hasil salah (negatif)
+//     sebab  : urutan terbalik; seharusnya uangBayar - totalBayar.
+
+// [8] itemGenap = jumlahItem % 2 === 1
+//     jenis  : tidak error, hasil salah
+//     sebab  : % 2 === 1 berarti GANJIL, bukan genap. Seharusnya === 0.
+
+// [9] let namaKedai = "Kedai Senja Baru" (setelah `const namaKedai` di atas)
+//     jenis  : menghentikan program (SyntaxError)
+//     sebab  : redeclaration identifier yang sama di scope yang sama.
+
+// [10] transaksiSelesai + 1;
+//      jenis  : tidak error, hasil tidak berubah
+//      sebab  : ekspresi tanpa assignment; nilainya dibuang. Harus ++.
+
+// [11] TARIF_PAJAK = 0.12;
+//      jenis  : menghentikan program (TypeError)
+//      sebab  : assignment ke `const` tidak diizinkan.
+
+// [12] Console.log(...)
+//      jenis  : menghentikan program (ReferenceError)
+//      sebab  : `Console` (huruf besar) bukan objek global; yang benar console.
