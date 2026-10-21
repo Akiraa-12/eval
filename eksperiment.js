@@ -111,4 +111,4 @@ let tunggal = 1;
 //      Perbaikan: ganti `var` → `let` agar tiap iterasi punya binding sendiri.
 //    - Redeclare `var total` di dua fungsi berbeda bisa saling menimpa jika
 //      lupa `let`/`const`, menyebabkan perhitungan salah tanpa error.
-// *
+// 
